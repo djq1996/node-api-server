@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <div class="container"></div>
+  <div id="app"></div>
   <script>
     var obj = {
       name: 'hanmeimei',
@@ -21,7 +21,7 @@
       methods: {
         submit: function () {
           console.log(1)
-          axios.post('http://47.100.26.246:5001/', obj)
+          axios.post('http://47.100.26.246:3000/json', obj)
             .then(function (response) {
               console.log(response);
             })
