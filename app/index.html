@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>node api</title>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+  <div class="container"></div>
+  <script>
+    var obj = {
+      name: 'hanmeimei',
+      age: 18,
+    }
+    var vm = new Vue({
+      el: '#app',
+      data: obj,
+      methods: {
+        submit: function () {
+          console.log(1)
+          axios.post('http://47.100.26.246:5001/', obj)
+            .then(function (response) {
+              console.log(response);
+            })
+            .catch(function (error) {
+              console.log(error);
+            });
+        }
+      },
+      mounted() {
+        this.submit()
+      }
+    })
+  </script>
+</body>
+
+</html>
