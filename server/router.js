@@ -14,6 +14,12 @@ var questions = [
 ];
 const router = new Router();
 
+router.get('/', async (ctx, next) => {
+  await ctx.render('../app/index.html', {
+    title: 'Hello djq'
+  });
+});
+
 router.get('/string', async (ctx, next) => {
   ctx.body = 'koa2 string';
 });

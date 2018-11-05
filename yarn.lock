@@ -1466,6 +1466,10 @@ koa-router@^7.4.0:
     path-to-regexp "^1.1.1"
     urijs "^1.19.0"
 
+koa-views-render@^0.0.1:
+  version "0.0.1"
+  resolved "http://registry.npm.taobao.org/koa-views-render/download/koa-views-render-0.0.1.tgz#98b38e52de411d55e380a3d4af8be06a85f404bf"
+
 koa@^2.5.2:
   version "2.6.1"
   resolved "http://registry.npm.taobao.org/koa/download/koa-2.6.1.tgz#88cabb18cd297e0577a37e40f400c4b6f1699fef"
