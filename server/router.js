@@ -1,5 +1,6 @@
 const Router = require('koa-router');
-
+const views = require('koa-view');
+const path = require('../path');
 var questions = [
   {
     data: 213,
@@ -13,9 +14,10 @@ var questions = [
   }
 ];
 const router = new Router();
-
+router.use(views(path + '/app'));
+console.log('path', path);
 router.get('/', async (ctx, next) => {
-  await ctx.render('../app/index.html', {
+  await ctx.render('index', {
     title: 'Hello djq'
   });
 });
