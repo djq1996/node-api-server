@@ -15,7 +15,7 @@ var questions = [
 ];
 const router = new Router();
 router.use(views(path + '/app'));
-console.log('path', path);
+// console.log('path', path);
 router.get('/', async (ctx, next) => {
   await ctx.render('index', {
     title: 'Hello djq'
