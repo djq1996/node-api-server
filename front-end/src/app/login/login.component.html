@@ -1,0 +1,33 @@
+<div class="content" *ngIf="!sign">
+  <h1>login</h1>
+  <form class="form">
+    <mat-form-field class="full-width">
+      <input
+        type="text"
+        matInput
+        placeholder="Name"
+        name="signPushName"
+        [(ngModel)]="login.name"
+      />
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input
+        type="password"
+        matInput
+        placeholder="Password"
+        name="signPushPassword"
+        [(ngModel)]="login.password"
+      />
+    </mat-form-field>
+  </form>
+  <div class="sign-go"><a routerLink="/register">go to register?</a></div>
+  <button
+    class="sign-in"
+    mat-raised-button
+    color="primary"
+    (click)="loginEvent()"
+    [disabled]="btnDisabled"
+  >
+    login
+  </button>
+</div>

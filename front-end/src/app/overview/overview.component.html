@@ -1,0 +1,21 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>hello</span> <span class="tab-spacer"></span>
+    <mat-icon class="tab-icon">favorite</mat-icon>
+    <mat-icon class="tab-icon">delete</mat-icon>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-list>
+  <h3 mat-subheader>Notes</h3>
+  <mat-list-item *ngFor="let note of notes">
+    <mat-icon mat-list-icon>code</mat-icon>
+    <h4 mat-line>{{ note.title }}</h4>
+    <p mat-line class="demo-2" style="text-align: right">{{ note.date }}</p>
+    <p mat-line class="demo-2">
+      阅读：{{ note.readNum }} 点赞:{{ note.likeNum }} 评论:{{
+        note.commentNum
+      }}
+    </p>
+    <mat-divider [inset]="true" *ngIf="!last"></mat-divider>
+  </mat-list-item>
+</mat-list>
