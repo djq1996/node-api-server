@@ -1,0 +1,42 @@
+<div class="content" *ngIf="!sign">
+  <h1>register</h1>
+  <form class="form">
+    <mat-form-field class="full-width">
+      <input
+        matInput
+        type="text"
+        placeholder="Name"
+        name="signPushName"
+        [(ngModel)]="register.name"
+      />
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input
+        matInput
+        type="email"
+        placeholder="Mail"
+        name="signPushMail"
+        [(ngModel)]="register.mailbox"
+      />
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input
+        matInput
+        type="password"
+        placeholder="Password"
+        name="signPushPassword"
+        [(ngModel)]="register.password"
+      />
+    </mat-form-field>
+  </form>
+  <div class="sign-go"><a routerLink="/login">go to login></a></div>
+  <button
+    class="sign-in"
+    mat-raised-button
+    color="primary"
+    (click)="registerEvent()"
+    [disabled]="btnDisabled"
+  >
+    register
+  </button>
+</div>
